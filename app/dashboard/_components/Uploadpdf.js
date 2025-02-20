@@ -107,7 +107,7 @@ const  Uploadpdf= ({children , isMaxFile})=> {
       <span className="text-2xl">+</span> Upload PDF File
     </Button>
   </DialogTrigger>
-  <DialogContent>
+  <DialogContent className='rounded-lg'>
     <DialogHeader>
       <DialogTitle >Upload PDF File</DialogTitle>
       <DialogDescription asChild>

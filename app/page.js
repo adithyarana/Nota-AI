@@ -48,13 +48,13 @@ export default function Home() {
 
     <>
 
-    <div className="flex justify-between items-center   bg-white-300/60 backdrop-blur-md rounded m-2">
+    <div className="flex justify-evenly items-center bg-blue-100  bg-white-300/60 backdrop-blur-md rounded ">
     {/* Logo with hover effect */}
-    <Link href="/" className="flex items-center space-x-2 group">
+    <Link href="/" className="flex items-center  space-x-2 group">
     <img
           src={"/logoo.png"} 
           alt="Logo"
-          className="h-24 w-full transition-transform duration-300 group-hover:scale-110"
+          className="h-24 w-full transition-transform duration-300 group-hover:scale-110  "
         />
       
     </Link>
@@ -62,8 +62,8 @@ export default function Home() {
     <div className="flex items-center space-x-4">
       <SignedOut>
         <SignInButton>
-          <Button className="text-white bg-black rounded-full px-4 py-2 border  transition-transform duration-300 hover:scale-105 hover:bg-gray-900">
-           Get Started
+          <Button className="text-black bg-blue-200  rounded-full px-4 py-2 border  transition-transform duration-300 hover:scale-105 hover:bg-pink-100">
+        Sign In
           </Button>
         </SignInButton>
       </SignedOut>

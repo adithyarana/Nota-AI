@@ -1,21 +1,21 @@
-import Header from "./_components/Header";
-import Sidebar from "./_components/Sidebar";
-import React from "react";
+'use client';
+import React, { useState } from "react";
+import Sidebar from "../dashboard/_components/Sidebar.js";
 
-function DashboardLayout({ children }) {
+const DashboardLayout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
-      <div className="md:w-64 h-screen fixed">
-        <Sidebar />
-      </div>
+    <div className="flex overflow-hidden">
+      {/* Sidebar Component */}
+      <Sidebar isOpen={isOpen} toggleSidebar={() => setIsOpen(!isOpen)} />
 
-      <div className="md:ml-64  ">
-        <Header />
-
-        <div className="p-10">{children}</div>
+      {/* Main Content */}
+      <div className={`transition-all duration-300 flex-1 ${isOpen ? "ml-52 " : "ml-16"} p-4  `}>
+        {children}
       </div>
     </div>
   );
-}
+};
 
 export default DashboardLayout;
