@@ -18,7 +18,7 @@
 ## 📂 Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/nota-ai.git
+   git clone https: https://github.com/adithyarana/Nota-AI.git
    cd nota-ai
    ```
 2. Install dependencies:
