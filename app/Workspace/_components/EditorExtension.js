@@ -97,7 +97,7 @@ function EditorExtension({ editor }) {
 
         // Convert AI's response into a list of bullet points
       const bulletPoints = aiText.split("\n").map(point => `<li>${point}</li>`).join('');
-      const formattedAnswer = `<ul>${bulletPoints}</ul>`;
+      const formattedAnswer = `<ul>${bulletPoints}</ul>`; 
       
       // Insert AI answer into the editor content
       const Alltext= editor.getHTML();
