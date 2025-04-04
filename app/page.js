@@ -11,6 +11,7 @@ import HeroSection from "./components/landingpage";
 
 
 
+
 export default function Home() {
 
   // code for saving the user data in the convwx database
@@ -48,45 +49,45 @@ export default function Home() {
 
     <>
 
-    <div className="flex justify-evenly items-center bg-blue-100  bg-white-300/60 backdrop-blur-md rounded ">
-    {/* Logo with hover effect */}
-    <Link href="/" className="flex items-center  space-x-2 group">
+<div className="flex justify-between items-center px-6 py-4 bg-white/30 backdrop-blur-lg shadow-md  border border-white/20">
+  {/* Logo with hover effect */}
+  <Link href="/" className="flex items-center space-x-2 group">
     <img
-          src={"/logoo.png"} 
-          alt="Logo"
-          className="h-24 w-full transition-transform duration-300 group-hover:scale-110  "
-        />
-      
-    </Link>
+      src="/logoo.png"
+      alt="Logo"
+      className="h-16 w-auto transition-transform duration-300 group-hover:scale-110"
+    />
+  </Link>
 
-    <div className="flex items-center space-x-4">
-      <SignedOut>
-        <SignInButton>
-          <Button className="text-black bg-blue-200  rounded-full px-4 py-2 border  transition-transform duration-300 hover:scale-105 hover:bg-pink-100">
-        Sign In
-          </Button>
-        </SignInButton>
-      </SignedOut>
+  {/* Navigation Buttons */}
+  <div className="flex items-center gap-4">
+    <SignedOut>
+      <SignInButton>
+        <Button className="text-white bg-gradient-to-r from-blue-400 to-purple-400 rounded-full px-6 py-2 border border-transparent shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:from-pink-400 hover:to-yellow-400">
+          Sign In
+        </Button>
+      </SignInButton>
+    </SignedOut>
 
-      <SignedOut>
-        <SignUpButton>
-          <Button className="text-black bg-blue-200 rounded-full px-4 py-2 border  transition-transform duration-300 hover:scale-105 hover:bg-pink-100">
-            Sign up
-          </Button>
-        </SignUpButton>
-      </SignedOut>
+    <SignedOut>
+      <SignUpButton>
+        <Button className="text-white bg-gradient-to-r from-purple-400 to-blue-400 rounded-full px-6 py-2 border border-transparent shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:from-yellow-400 hover:to-pink-400">
+          Sign Up
+        </Button>
+      </SignUpButton>
+    </SignedOut>
 
-      <SignedIn >
-        <Link href="/dashboard" passHref>
-          <Button asChild className="bg-blue-400 text-white px-4 py-2  rounded-full transition-transform duration-300 hover:scale-105 hover:bg-blue-700">
-            <span>Dashboard</span>
-          </Button>
-        </Link>
-        <UserButton  afterSignOutUrl="/" />
-      </SignedIn>
-    </div>
-
+    <SignedIn>
+      <Link href="/dashboard" passHref>
+        <Button asChild className="bg-blue-500 text-white px-6 py-2 rounded-full transition-transform duration-300 hover:scale-105 hover:bg-blue-700 shadow-md">
+          <span>Dashboard</span>
+        </Button>
+      </Link>
+      <UserButton afterSignOutUrl="/" />
+    </SignedIn>
   </div>
+</div>
+
 
   {/* Landing page section */}
 
@@ -96,7 +97,8 @@ export default function Home() {
 
 
   </>
- 
+
+
 
  
   );
